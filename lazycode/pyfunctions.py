@@ -1,4 +1,4 @@
-from time import sleep
+from time import sleep, perf_counter
 
 
 def fprint(*args):
@@ -30,4 +30,18 @@ def lprint(n, *args):
 def wait(t):
     sleep(t)
     
+def start_time():
+    t = perf_counter()
+    return t
+
+def stop_time():
+    t = perf_counter()
+    return t
+
+def elapse_time(start, stop):
+    print(f'Time elapse is: {stop - start} seconds.')
+    
+# def for_r(range_, args):
+#     for i in range(0, range_):
+#         args
 
