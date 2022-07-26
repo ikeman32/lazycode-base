@@ -20,10 +20,12 @@ def fprint(*args):
         
 # outputs print items one line at at time
 def lprint(n, *args):
-    if n == 1:
+    if n > 2:
+        raise Exception('n is greater than two.')
+    elif n == 1:
         for i in args:
             print(i)
-    if n == 2:
+    elif n == 2:
         for i in range(0,len(args),2):
             print(f'{args[i]} {args[i + 1]}')
             

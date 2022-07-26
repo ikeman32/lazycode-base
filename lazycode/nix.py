@@ -1,14 +1,6 @@
 from platform import system
 from subprocess import run
 
-# simple ls command to list files and directories in Linux
-def ls():
-    sys = system()
-    if sys == 'Linux':
-        run('ls')# works
-    else:
-        raise Exception('Linux is required for this command to work.')
-    
 # Linux clear command
 def clear():
     sys = system()
