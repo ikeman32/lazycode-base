@@ -33,35 +33,61 @@ def cmd(sys_cmd):
     else:
         raise Exception('Linux is required for this command to work.')
     
+
+def ldir():
+    sys = system()
+    if sys == 'Linux':
+        run('ls')
+    else:
+        raise Exception('Linux is required for this command to work.')
+    
+def hdir():
+    sys = system()
+    if sys == 'Linux':
+        run('ls -a')
+    else:
+        raise Exception('Linux is required for this command to work.')
+    
+
+def reboot():
+    sys = system()
+    if sys == 'Linux':
+        run('reboot')
+    else:
+        raise Exception('Linux is required for this command to work.')
+    
+
+
+
 '''The following 4 functions do not work at this times'''
 # output text to a file
-def txt_tofile(txt, file_name):
-    sys = system()
-    if sys == 'Linux':
-        run(''.join(['echo ', txt, ' > ', file_name]))# not working
-    else:
-        raise Exception('Linux is required for this command to work.')
+# def txt_tofile(txt, file_name):
+#     sys = system()
+#     if sys == 'Linux':
+#         run(''.join(['echo ', txt, ' > ', file_name]))# not working
+#     else:
+#         raise Exception('Linux is required for this command to work.')
     
-# append text to a file
-def ap_txt_tofile(txt, file_name, ext = 'txt'):
-    sys = system()
-    if sys == 'Linux':
-        run(f'echo {txt} >> {file_name}.{ext}')
-    else:
-        raise Exception('Linux is required for this command to work.')
+# # append text to a file
+# def ap_txt_tofile(txt, file_name, ext = 'txt'):
+#     sys = system()
+#     if sys == 'Linux':
+#         run(f'echo {txt} >> {file_name}.{ext}')
+#     else:
+#         raise Exception('Linux is required for this command to work.')
     
-# send a commands output to a file
-def out_tofile(cmd, file_name, ext = 'txt'):
-    sys = system()
-    if sys == 'Linux':
-        run(f'{cmd} > {file_name}.{ext}')
-    else:
-        raise Exception('Linux is required for this command to work.')
+# # send a commands output to a file
+# def out_tofile(cmd, file_name, ext = 'txt'):
+#     sys = system()
+#     if sys == 'Linux':
+#         run(f'{cmd} > {file_name}.{ext}')
+#     else:
+#         raise Exception('Linux is required for this command to work.')
 
-# append a commands output to a file
-def ap_tofile(cmd, file_name, ext = 'txt'):
-    sys = system()
-    if sys == 'Linux':
-        run(f'{cmd} >> {file_name}.{ext}')
-    else:
-        raise Exception('Linux is required for this command to work.')
+# # append a commands output to a file
+# def ap_tofile(cmd, file_name, ext = 'txt'):
+#     sys = system()
+#     if sys == 'Linux':
+#         run(f'{cmd} >> {file_name}.{ext}')
+#     else:
+#         raise Exception('Linux is required for this command to work.')
