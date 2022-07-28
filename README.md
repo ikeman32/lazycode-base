@@ -4,52 +4,54 @@ This is a personal library I decided to publish in case others find it useful. I
 
 ## importing library
 
-prefered method: from lazycode.libName import function
+prefered method: from lazycode import lib_function
+example: from lazy code import sclear
 
-## shell library: platform independent
+## platform independent functions
 
-**clear**
+**sclear**
 Clears the console screen, detects OS and outputs the commandline equivelant for that OS. For example, windows command prompt command is cls and Linux is ls.
 
 usage:
-clear()
+sclear()
 
-**cmd**
+**scmd**
 This is intended to send all or most of the commandline commands to the system but only partially works.
 
 working example: cmd('cls') or cmd('ls -a')
 
 failing example: cmd('echo Echo this > output.txt)
 
-**ldir**
+**sldir**
 Literally list directory, detects OS and outputs to the system commandline for the detected OS. The result is a list of all the visible files and directories.
 
 usage: 
 ldir()
 
-**hdir** 
+**shdir** 
 Same as ldir except is shows hidden files and directories as well.
 
 usage:
-hdir()
+shdir()
 
-**reboot**
+**sreboot**
 Reboots the computer. This works on Linux and should work on Windows. I am unable to test this on a Mac OS as I do not have a Mac and unable to find a VM.
 
-## nix library for Linux only
+## Linux only
 
 **These commands are the same as the shell library except the only work in Linux**
 commands:
--clear
--cmd
--ldir
--hdir
--reboot
+-lclear
+-lmkdir
+-lcmd
+-lldir
+-lhdir
+-lreboot
 
-**mkdir**
+**lmkdir**
 Linux command to make a directory.
 
-usage: mkdir('dir_name')
+usage: lmkdir('dir_name')
 
 ## pythonfunctions
 Some python helper functions.
@@ -96,3 +98,28 @@ elapse_time(start, stop)
 
 output:
 Time elapse is: N seconds.
+
+**rchoice**
+Accepts a list argument and optional message to be printed and option boolean argument. Message default is an empty string, and the default of the boolean is False. If the either optional arguments are used then both must be set and the boolean option must be set to True.
+
+usage:
+
+my_list = [1, 2, 3, 4, 5, 6]
+
+choice(my_list)
+
+returns a randomly selected choice from the list
+
+choice(my_list, 'The random choice is: ', True)
+
+Output:
+The random choice is: 5// or some other random choice from the list
+
+**die**
+Accepts a number argument, optional msge argument, and optional True/False argument. Message default is an empty string, and the default of the boolean is False. If the either optional arguments are used then both must be set and the boolean option must be set to True.
+
+die(20)
+
+returns a random integer from 1 to 20
+
+die(20, 'You rolled a: ', True)

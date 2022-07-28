@@ -2,7 +2,7 @@ from platform import system
 from subprocess import run
 
 # Linux clear command
-def clear():
+def lclear():
     sys = system()
     if sys == 'Linux':
         run('clear')# works
@@ -10,7 +10,7 @@ def clear():
         raise Exception('Linux is required for this command to work.')
     
 # make directory name
-def mkdir(dir_):
+def lmkdir(dir_):
     sys = system()
     if sys == 'Linux':
         run(['mkdir', dir_])# works
@@ -18,7 +18,7 @@ def mkdir(dir_):
         raise Exception('Linux is required for this command to work.')
     
 # rune any linux command with flags
-def cmd(sys_cmd):
+def lcmd(sys_cmd):
     sys = system()
     if sys == 'Linux':
         run(sys_cmd)# partially works
@@ -26,14 +26,14 @@ def cmd(sys_cmd):
         raise Exception('Linux is required for this command to work.')
     
 
-def ldir():
+def lldir():
     sys = system()
     if sys == 'Linux':
         run('ls')
     else:
         raise Exception('Linux is required for this command to work.')
     
-def hdir():
+def lhdir():
     sys = system()
     if sys == 'Linux':
         run('ls -a')
@@ -41,7 +41,7 @@ def hdir():
         raise Exception('Linux is required for this command to work.')
     
 
-def reboot():
+def lreboot():
     sys = system()
     if sys == 'Linux':
         run('reboot')

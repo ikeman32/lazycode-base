@@ -2,7 +2,7 @@ from platform import system
 from subprocess import run
 
 # Detects Operating System then clears the screen
-def clear():
+def sclear():
     sys = system()
     if sys == 'Linux':
         run('clear')
@@ -17,7 +17,7 @@ def clear():
             raise Exception('Could not determin Operating system!')
 
 # Detects Operating system and runs the specified command.
-def cmd(sys_cmd):
+def scmd(sys_cmd):
     sys = system()
     if sys == 'Linux':
         run(sys_cmd)
@@ -31,7 +31,7 @@ def cmd(sys_cmd):
         except:
             raise Exception('Could not determin Operating system!')
 
-def ldir():
+def sldir():
     sys = system()
     if sys == 'Linux':
         run('ls')
@@ -45,7 +45,7 @@ def ldir():
         except:
             raise Exception('Could not determin Operating system!')
         
-def hdir():
+def shdir():
     sys = system()
     if sys == 'Linux':
         run('ls -a')
@@ -59,7 +59,7 @@ def hdir():
         except:
             raise Exception('Could not determin Operating system!')
         
-def reboot():
+def sreboot():
     sys = system()
     if sys == 'Linux':
         run('reboot')
