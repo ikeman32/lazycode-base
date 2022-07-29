@@ -2,6 +2,11 @@
 
 This is a personal library I decided to publish in case others find it useful. It's still very much a work in progress and is mostly experimental. I made it in order to save me a few key strokes while coding in python.
 
+## how to install
+presently lazycode is only available at test.pypi.org to install:
+
+pip install -i https://test.pypi.org/simple/ lazycode
+
 ## importing library
 
 prefered method: from lazycode import lib_function
